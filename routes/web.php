@@ -16,11 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('beneficiaries' 
-    // [
-    //   'person' => Person::all()
-    // ]
-  );
+    return view('beneficiaries',
+    [
+      'person' => Person::all()
+    ]);
 });
 
 Route::get('/{person:id}', function (Person $person) {

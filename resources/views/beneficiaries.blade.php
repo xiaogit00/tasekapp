@@ -1,6 +1,4 @@
-hello 
-
-<!-- @extends('layouts.app')
+@extends('layouts.app')
 @section('content')
 <body>
 
@@ -117,4 +115,4 @@ hello
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
 </body>
-@endsection -->
+@endsection
