@@ -15,6 +15,9 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+// To Enable Auto Migration
+
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
@@ -41,6 +44,8 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+// $app->withFacades();
+// $app->register(\KitLoong\MigrationsGenerator\MigrationsGeneratorServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Return The Application
