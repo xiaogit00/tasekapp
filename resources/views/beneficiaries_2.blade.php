@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <body>
     <!-- side bar -->
     <div class="container-fluid">
@@ -56,3 +58,4 @@
 </body>
 
 </html>
+@endsection
