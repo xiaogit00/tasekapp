@@ -1,8 +1,10 @@
-@extends('layouts.app')
+@extends('layouts_2.app')
 @section('content')
+
+
 <body>
     <!-- side bar -->
-    <div class="container-fluid">
+    <!-- div class="container-fluid">
         <div class="row">
             <nav id="sideBarMenu" class="bg-dark col-md-3 col-lg-2 vh-100">
                 <a class="navbar-brand d-flex justify-content-center mt-2" href="#">
@@ -23,18 +25,18 @@
                         <a href="" class="nav-link active"><i class="fas fa-tasks"></i> Programs</a>
                     </li>
                 </ul>
-            </nav>
+            </nav -->
 
 
-            <div id="mainContent" class="col-md-9 col-lg-10">
+            <!-- div id="mainContent" class="col-md-9 col-lg-10" -->
                 <!-- search-bar -->
-                <div class="input-group mt-2">
+                <!-- div class="input-group mt-2">
                     <input type="text" class="form-control form-control-lg" placeholder="What are you searching for?" aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-outline-primary" type="button">Search</button>
                     </div>
-                </div>
-            </div>
+                </!-->
+            </!-->
             <!-- main content to be displayed here -->
             <!-- Page Content  -->
           <div id="content" class="p-4 p-md-5 pt-5">
@@ -84,13 +86,12 @@
 
 
 
+    <!-- javascript_extension -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <!-- JS EXTENSION -->
-    <!--<script src="../app.js"></script>-->
 
 </body>
 
