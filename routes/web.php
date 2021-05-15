@@ -16,9 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    \Illuminate\Support\Facades\DB::listen(function($query) {
+      logger($query->sql, $query->bindings);
+    });
+
+
     return view('beneficiaries_2',
     [
-      'person' => Person::all()
+      'person' => Person::with('programs')->get()
     ]);
 });
 
