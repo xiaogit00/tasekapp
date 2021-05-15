@@ -70,14 +70,23 @@
 
       </div>
     </nav>
-
+      <!-- ******************************************* -->
       <!-- Page Content  -->
-    <div id="content" class="p-4 p-md-5 pt-5">
 
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <h1>{{$person->name}}</h1>
+        <p>{{$age}}</p>
+        <p>{{$person->gender}}</p>
+        <p>{{$person->nric}}</p>
+        <p>{{$person->phoneNum}}</p>
+        <p>{{$person->Race}}</p>
+        <p>{{$person->Address}}</p>
       <h2 class="mb-4"></h2>
 
 
       </div>
+
+      <!-- *****************END PAGE CONTENT ***************** -->
   </div>
 
   <script src="js/jquery.min.js"></script>

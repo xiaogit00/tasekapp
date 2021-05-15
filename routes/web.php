@@ -2,6 +2,7 @@
 
 use App\Models\Person;
 use App\Models\Program;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,7 +30,8 @@ Route::get('/', function () {
 
 Route::get('/{person:id}', function (Person $person) {
     return view('profile', [
-      'person' => Person::all()
+      'person' => $person,
+      'age' => Carbon::parse($person->dob)->age
     ]);
 });
 
