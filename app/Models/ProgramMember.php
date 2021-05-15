@@ -14,5 +14,5 @@ class ProgramMember extends Model
       // hasOne, hasMany, belongsTo, belongsToMany
       return $this->belongsTo(Program::class, 'id');
     }
-    
+
 }

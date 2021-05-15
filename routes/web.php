@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('beneficiaries',
+    return view('beneficiaries_2',
     [
       'person' => Person::all()
     ]);
@@ -31,3 +31,9 @@ Route::get('/{person:id}', function (Person $person) {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// Post Requests:
+//  Route::post('/pizzas', 'PizzaController@store')
+// THEN in  Pizza models:\
+// public function store()
