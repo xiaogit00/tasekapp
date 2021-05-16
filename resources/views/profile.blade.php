@@ -75,17 +75,18 @@
 
     <div id="content" class="p-4 p-md-5 pt-5">
         <h1>{{$person->name}}</h1>
-        <p>{{$age}}</p>
+        <p>{{$person->dob}}</p>
         <p>{{$person->gender}}</p>
         <p>{{$person->nric}}</p>
         <p>{{$person->phoneNum}}</p>
-        <p>{{$person->Race}}</p>
-        <p>{{$person->Address}}</p>
-        <p>Family Members:
-          @foreach ($familyMembers as $familyMember)
-          {{$familyMember->name}}
+        <p>{{$person->race}}</p>
+        <p>{{$person->address}}</p>
+        <h2>Family Members:</h2> <br>
+          @foreach ($familyMembers as $familymember)
+          {{$familymember->rolePrimary}}: {{$familymember->name}}
+        <br>
           @endforeach
-        </p>
+
       <h2 class="mb-4"></h2>
 
 

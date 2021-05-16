@@ -9,9 +9,10 @@ class Family extends Model
 {
     use HasFactory;
 
-    public function Person()
+    public function familyMembers()
     {
-      return $this->hasMany(Person::class, 'family_members', 'familyID', 'personID');
+      return $this->hasMany(Person::class, 'familyID');
+      // This allows me to call: Family->familyMembers->name $
 
     }
 }
