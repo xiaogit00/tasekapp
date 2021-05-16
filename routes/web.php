@@ -2,6 +2,7 @@
 
 use App\Models\Person;
 use App\Models\Program;
+use App\Models\Family;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
@@ -31,7 +32,8 @@ Route::get('/', function () {
 Route::get('/{person:id}', function (Person $person) {
     return view('profile', [
       'person' => $person,
-      'age' => Carbon::parse($person->dob)->age
+      'age' => Carbon::parse($person->dob)->age,
+      'familyMembers' => Family::with('Person')->get()
     ]);
 });
 

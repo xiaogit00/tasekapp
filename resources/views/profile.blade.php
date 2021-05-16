@@ -81,6 +81,11 @@
         <p>{{$person->phoneNum}}</p>
         <p>{{$person->Race}}</p>
         <p>{{$person->Address}}</p>
+        <p>Family Members:
+          @foreach ($familyMembers as $familyMember)
+          {{$familyMember->name}}
+          @endforeach
+        </p>
       <h2 class="mb-4"></h2>
 
 
