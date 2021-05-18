@@ -38,6 +38,7 @@
 
           <td>{{$person[$i]['phoneNum']}}</td>
           <td>{{$person[$i]['address']}}</td>
+          
         </tr>
         @endfor
 
