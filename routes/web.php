@@ -6,6 +6,7 @@ use App\Models\Family;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,12 +23,17 @@ Route::get('/', function () {
       logger($query->sql, $query->bindings);
     });
 
+    $persons = Person::with('programs');
+    if (request('query')) {
+      $persons->where('name', 'like', '%' . request('query') . '%');
+
+    }
 
     return view('beneficiaries_2',
     [
-      'person' => Person::with('programs')->get()
+      'persons' => $persons->get()
     ]);
-});
+})->name('home');
 
 Route::get('/{person:id}', function (Person $person) {
     return view('profile', [
@@ -36,9 +42,10 @@ Route::get('/{person:id}', function (Person $person) {
       //the $person variable returns the results of the INDIVIDUAL person
       //and then we try to find the Family by familyID associated w person :)
       //and then call the familyMembers relationship to return a collection of
-      //people in the same family 
+      //people in the same family
     ]);
 });
+
 
 Auth::routes();
 

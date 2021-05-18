@@ -8,7 +8,7 @@
 
   <div id="content" class="p-4 p-md-5 pt-5">
 
-    <h2 class="mb-4">Beneficiary table</h2>
+ <!-- Beneficiaires Table -->
     <table class='table'>
       <thead>
         <tr>
@@ -21,26 +21,27 @@
       </thead>
       <tbody>
         <!-- This is a loop for the table rows -->
-        @for ($i =0; $i<100; $i++)
+        @foreach ($persons->all() as $person)
 
         <!-- insert popover (modal) for names -->
         <!-- div class="modal-dialog modal-dialog-centered" -->
         </~div>
         <tr class='table-hover'>
-          <td><a href="/{{$person[$i]['id']}}">{{$person[$i]['name']}}</a></td>
-          <td>{{$person[$i]['dob']}}</td>
+
+          <td><a href="/{{$person->id}}">{{$person->name}}</a></td>
+          <td>{{$person->dob}}</td>
           <td>
-          @foreach ($person[$i]->programs as $program)
+          @foreach ($person->programs as $program)
           {{$program->name}}
           @endforeach
           </td>
-          <!-- <td>{{$person[$i]['programs']}}</td> -->
 
-          <td>{{$person[$i]['phoneNum']}}</td>
-          <td>{{$person[$i]['address']}}</td>
+
+          <td>{{$person->phoneNum}}</td>
+          <td>{{$person->address}}</td>
 
         </tr>
-        @endfor
+        @endforeach
 
       </tbody>
     </table>
