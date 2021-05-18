@@ -19,30 +19,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    \Illuminate\Support\Facades\DB::listen(function($query) {
-      logger($query->sql, $query->bindings);
-    });
+// Route::get('/', function () {
+//     \Illuminate\Support\Facades\DB::listen(function($query) {
+//       logger($query->sql, $query->bindings);
+//     });
+//
+//     $persons = Person::with('programs')->Paginate(15);
+//     if (request('query')) {
+//       $persons->where('name', 'like', '%' . request('query') . '%');
+//
+//     }
+//     if (request('ajax')) {
+//
+//     		$view = view('data',compact('posts'))->render();
+//
+//             return response()->json(['html'=>$view]);
+//
+//         }
+//     return view('beneficiaries_2',
+//     [
+//       'persons' => $persons
+//     ]);
+// })->name('home');
 
-    $persons = Person::with('programs')->Paginate(15);
-    if (request('query')) {
-      $persons->where('name', 'like', '%' . request('query') . '%');
-
-    }
-    if (request('ajax')) {
-
-    		$view = view('data',compact('posts'))->render();
-
-            return response()->json(['html'=>$view]);
-
-        }
-    return view('beneficiaries_2',
-    [
-      'persons' => $persons
-    ]);
-})->name('home');
-
-// Route::get('/', [BennyController::class, 'myPerson']);
+Route::get('/', [BennyController::class, 'myPerson']);
 
 
 Route::get('/{person:id}', function (Person $person) {
