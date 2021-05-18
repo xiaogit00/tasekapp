@@ -15,7 +15,7 @@
           <th>Name</th>
           <th>Age</th>
           <th>Programs</th>
-          <th>Number</th>
+          <th>num /th>
           <th>Address</th>
         </tr>
       </thead>
@@ -54,6 +54,46 @@
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+  <!-- load more data on scroll -->
+  <div id="load_data"></div>
+  <div id="load_data_message"></div>
+
+  <script>
+  // declare global variables
+  var limit = 7; // num of data fetched for every ajax call
+  var start = 0; // num of data at start
+  var reachedMax = false; // when all data retrieved, no more ajax call required
+
+    $(document).ready(function(){
+      getData();
+    });
+
+    function getData(){
+      if(reachedMax){
+        return;
+      }
+    }
+
+    // ajax request (object)
+    $.ajax({
+      url: "data.php", // send request to this page
+      method: "POST", // post method to send data to server
+      dataType:{
+        getData: 1,
+        limit: limit,
+        start: start,
+      },
+      success: function(response){
+          $('load_data').append(data);
+        }
+      })
+   
+
+  </script>
 
 
 </body>
