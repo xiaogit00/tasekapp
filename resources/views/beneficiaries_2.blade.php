@@ -23,6 +23,9 @@
         <!-- This is a loop for the table rows -->
         @for ($i =0; $i<100; $i++)
 
+        <!-- insert popover (modal) for names -->
+        <!-- div class="modal-dialog modal-dialog-centered" -->
+        </~div>
         <tr class='table-hover'>
           <td><a href="/{{$person[$i]['id']}}">{{$person[$i]['name']}}</a></td>
           <td>{{$person[$i]['dob']}}</td>

@@ -31,7 +31,7 @@
     <!-- side bar -->
     <div class="container-fluid">
         <div class="row">
-            <nav id="sideBarMenu" class="bg-dark col-md-3 col-lg-2 vh-100">
+            <nav id="sideBarMenu" class="bg-dark col-md-3 col-lg-2 vh-100 sticky-top">
                 <a class="navbar-brand d-flex justify-content-center mt-2" href="#">
                     <div class="h3">TASEK</div>
                 </a>
@@ -60,7 +60,7 @@
 
             <div id="mainContent" class="col-md-9 col-lg-10">
                 <!-- search-bar -->
-                <div class="input-group mt-2">
+                <div class="input-group mt-2 sticky-top">
                     <input type="text" class="form-control form-control-lg" placeholder="What are you searching for?" aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-outline-primary" type="button">Search</button>
