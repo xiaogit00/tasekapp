@@ -3,6 +3,7 @@
 use App\Models\Person;
 use App\Models\Program;
 use App\Models\Family;
+use App\Http\Controllers\BennyController;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
@@ -23,17 +24,26 @@ Route::get('/', function () {
       logger($query->sql, $query->bindings);
     });
 
-    $persons = Person::with('programs');
+    $persons = Person::with('programs')->Paginate(15);
     if (request('query')) {
       $persons->where('name', 'like', '%' . request('query') . '%');
 
     }
+    if (request('ajax')) {
 
+    		$view = view('data',compact('posts'))->render();
+
+            return response()->json(['html'=>$view]);
+
+        }
     return view('beneficiaries_2',
     [
-      'persons' => $persons->get()
+      'persons' => $persons
     ]);
 })->name('home');
+
+// Route::get('/', [BennyController::class, 'myPerson']);
+
 
 Route::get('/{person:id}', function (Person $person) {
     return view('profile', [

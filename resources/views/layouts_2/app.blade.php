@@ -12,7 +12,7 @@
     <!-- Scripts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/1c9222c777.js" crossorigin="anonymous"></script>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -21,6 +21,21 @@
     <!-- Styles -->
     <!-- check if the css file is being called -->
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <style type="text/css">
+
+  		.ajax-load{
+
+  			background: #e1e1e1;
+
+		    padding: 10px 0px;
+
+		    width: 100%;
+
+  		}
+
+  	</style>
+
+
 </head>
 
 
@@ -75,6 +90,49 @@
         </div>
     </div>
 
+    <div  style="display:none">
+
+	<p><img src="http://demo.onlinecode/plugin/loader.gif">Loading More post</p>
+
+</div>
+
+
+
+<script type="text/javascript">
+	var page = 1;
+	$(window).scroll(function() {
+	    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+	        page++;
+	        loadMoreData(page);
+	    }
+
+	});
+	function loadMoreData(page){
+	  $.ajax(
+	        {
+	            url: '?page=' + page,
+	            type: "get",
+	            beforeSend: function()
+	            {
+	                $('.ajax-load').show();
+	            }
+	        })
+	        .done(function(data)
+	        {
+	            if(data.html == " "){
+	                $('.ajax-load').html("No more records found");
+	                return;
+	            }
+	            $('.ajax-load').hide();
+	            $("#post-data").append(data.html);
+	        })
+	        .fail(function(jqXHR, ajaxOptions, thrownError)
+	        {
+	              alert('server not responding...');
+	        });
+	}
+
+</script>
 
 
 
@@ -101,8 +159,9 @@
 
 
 
-    <script src = "app.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
 
 </body>
 </html>

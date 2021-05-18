@@ -6,47 +6,50 @@
 
 
 
-  <div id="content" class="p-4 p-md-5 pt-5">
 
+
+  <div id="post-data" class="p-4 p-md-5 pt-5">
  <!-- Beneficiaires Table -->
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Programs</th>
-          <th>Number</th>
-          <th>Address</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- This is a loop for the table rows -->
-        @foreach ($persons->all() as $person)
+      @include('benny_data')
 
-        <!-- insert popover (modal) for names -->
-        <!-- div class="modal-dialog modal-dialog-centered" -->
-        </~div>
-        <tr class='table-hover'>
+    <!-- {!!$persons->links()!!} -->
+  </div>
+  <div class="ajax-load text-center" style="display: none">
+    <p>Loading...</p>
+  </div>
+  <script>
+    function loadMoreData(page)
+    {
+      $.ajax({
+        url: '/' + page,
+        type:'get',
+        beforeSend: function()
+        {
+          $(".ajax-load").show();
+        }
+      })
+      .done(function(data){
+        if(data.html == " "){
+          $('.ajax-load').html("No more records found");
+          return;
+        }
+        $('.ajax-load').hide();
+        $("#post-data").append(data.html);
+      })
+      .fail(function(jqXHR, ajaxOptions, thrownError){
+        alert("Server not responding...");
+      });
+    }
 
-          <td><a href="/{{$person->id}}">{{$person->name}}</a></td>
-          <td>{{$person->dob}}</td>
-          <td>
-          @foreach ($person->programs as $program)
-          {{$program->name}}
-          @endforeach
-          </td>
+    var page = 1;
+    $(window).scroll(function(){
+      if($(window).scrollTop() + $(window).height() >= $(document).height()){
+        page++;
+        loadMoreData(page);
+      }
+    });
+  </script>
 
-
-          <td>{{$person->phoneNum}}</td>
-          <td>{{$person->address}}</td>
-
-        </tr>
-        @endforeach
-
-      </tbody>
-    </table>
-
-    </div>
 
 
 
