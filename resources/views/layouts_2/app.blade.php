@@ -60,12 +60,12 @@
 
             <div id="mainContent" class="col-md-9 col-lg-10">
                 <!-- search-bar -->
-                <div class="input-group mt-2 sticky-top">
-                    <input type="text" class="form-control form-control-lg" placeholder="What are you searching for?" aria-label="Search" aria-describedby="basic-addon2">
+                <form class="input-group mt-2 sticky-top" action="" method="GET">
+                    <input type="text" name="query" class="form-control form-control-lg" placeholder="What are you searching for?" aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-outline-primary" type="button">Search</button>
                     </div>
-                </div>
+                </form>
                 <!-- Main Content -->
                 <div class="app">
                   @yield('content')
