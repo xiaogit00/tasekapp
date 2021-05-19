@@ -12,16 +12,16 @@
  <!-- Beneficiaires Table -->
       @include('benny_data2')
 
-    <!-- {!!$persons->links()!!} -->
+    {!!$persons->links()!!}
   </div>
 
   <!-- Loading -->
-  <div class="ajax-load text-center" style="display: none">
+  <!-- <div class="ajax-load text-center" style="display: none">
     <p>Loading...</p>
-  </div>
+  </div> -->
 
   <!-- Ajax Script -->
-  <script>
+  <!-- <script>
     function loadMoreData(page)
     {
       $.ajax({
@@ -52,7 +52,7 @@
         loadMoreData(page);
       }
     });
-  </script>
+  </script> -->
 
 
 
