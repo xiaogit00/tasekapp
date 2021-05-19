@@ -10,7 +10,7 @@
 
   <div id="post-data" class="p-4 p-md-5 pt-5">
  <!-- Beneficiaires Table -->
-      @include('benny_data')
+      @include('benny_data2')
 
     <!-- {!!$persons->links()!!} -->
   </div>
