@@ -7,7 +7,7 @@
 
 
 
-
+# call data
   <div id="post-data" class="p-4 p-md-5 pt-5">
  <!-- Beneficiaires Table -->
       @include('benny_data2')
@@ -16,43 +16,50 @@
   </div>
 
   <!-- Loading -->
-  <!-- <div class="ajax-load text-center" style="display: none">
+  {{-- add text-center into the ajax-load class --}}
+  <div class="ajax-load" style="display: none"> <!-- display: none means the (loading...) text is not visible --> 
     <p>Loading...</p>
-  </div> -->
+  </div>
 
   <!-- Ajax Script -->
-  <!-- <script>
-    function loadMoreData(page)
-    {
-      $.ajax({
-        url: '/' + page,
-        type:'get',
-        beforeSend: function()
-        {
-          $(".ajax-load").show();
+  <script>
+    // pre - data retrieval function 
+    function loadMoreData(page) {
+      // $.ajax(); => standard method used for request 
+      $.ajax({ // ajax method to perform the an AJAX request (send the parameters)
+        url: '/' + page, // the URL to send the request to (default is the current page)
+        type:'get', // specifies the type of request (get/post)
+        beforeSend: function() { // beforeSend method / function => run before sending the request 
+          $(".ajax-load").show(); // show() method shows the hidden elements
         }
       })
-      .done(function(data){
-        if(data.html == " "){
-          $('.ajax-load').html("No more records found");
+
+      // retrive data
+      .done(function(data) {
+        if(data.html == " ") { // when all data has been loaded
+          $('.ajax-load').html("No more records found"); // .html method is used to set content => overwrites the content within the ajax-load class
           return;
         }
-        $('.ajax-load').hide();
-        $("#post-data").append(data.html);
+        // when more data has yet to be loaded
+        $('.ajax-load').hide(); // hide the (loading...) text
+        $("#post-data").append(data.html); // ??
       })
+
+      // callback function
+      // if data fails to load due to an error, send an alert message 
       .fail(function(jqXHR, ajaxOptions, thrownError){
         alert("Server not responding...");
       });
     }
 
     var page = 1;
-    $(window).scroll(function(){
+    $(window).scroll(function() {
       if($(window).scrollTop() + $(window).height() >= $(document).height()){
         page++;
         loadMoreData(page);
       }
     });
-  </script> -->
+  </script>
 
 
 

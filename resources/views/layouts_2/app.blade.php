@@ -21,7 +21,7 @@
     <!-- Styles -->
     <!-- check if the css file is being called -->
     <link rel="stylesheet" type="text/css" href="css/app.css">
-    <style type="text/css">
+    {{-- <style type="text/css">
 
   		.ajax-load{
 
@@ -33,7 +33,7 @@
 
   		}
 
-  	</style>
+  	</style> --}}
 
 
 </head>
@@ -90,7 +90,7 @@
         </div>
     </div>
 
-    <div  style="display:none">
+    {{-- <div  style="display:none">
 
 	<p><img src="http://demo.onlinecode/plugin/loader.gif">Loading More post</p>
 
@@ -132,7 +132,7 @@
 	        });
 	}
 
-</script>
+</script> --}}
 
 
 
