@@ -11,17 +11,19 @@
 
     <!-- Scripts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/1c9222c777.js" crossorigin="anonymous"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/1c9222c777.js"></script>
+   
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <!-- check if the css file is being called -->
-    <link rel="stylesheet" type="text/css" href="css/app.css">
-    {{-- <style type="text/css">
+    {{-- <link rel="stylesheet" type="text/css" href="resources/css/app.css"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="{{url('resources/css/app.css')}}" > --}}
+
+    {{-- ajax styling --}}
+    <style type="text/css">
 
   		.ajax-load{
 
@@ -33,13 +35,9 @@
 
   		}
 
-  	</style> --}}
-
+  	</style>
 
 </head>
-
-
-
 
 
 <body>
@@ -52,7 +50,7 @@
                 </a>
                 <!-- create_user_button -->
                 <div class="text-center">
-                <button type="button" class="btn btn-primary btn-lg rounded-pill">Create User</button>
+                <button type="button" id="createUserButton" class="btn btn-primary btn-lg rounded-pill">Create User</button>
                 <hr class="bg-primary">
                 <ul class="nav flex-column">
                     <li class="nav-item">
@@ -82,85 +80,19 @@
                     </div>
                 </form>
                 <!-- Main Content -->
-                <div class="app">
-                  @yield('content')
-
+                {{-- why overflow auto not working ? shld remove the pagination 1st? --}}
+                <div class="app overflow-auto">
+                    @yield('content')
                 </div>
             </div>
         </div>
     </div>
 
-    {{-- <div  style="display:none">
-
-	<p><img src="http://demo.onlinecode/plugin/loader.gif">Loading More post</p>
-
-</div>
-
-
-
-<script type="text/javascript">
-	var page = 1;
-	$(window).scroll(function() {
-	    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
-	        page++;
-	        loadMoreData(page);
-	    }
-
-	});
-	function loadMoreData(page){
-	  $.ajax(
-	        {
-	            url: '?page=' + page,
-	            type: "get",
-	            beforeSend: function()
-	            {
-	                $('.ajax-load').show();
-	            }
-	        })
-	        .done(function(data)
-	        {
-	            if(data.html == " "){
-	                $('.ajax-load').html("No more records found");
-	                return;
-	            }
-	            $('.ajax-load').hide();
-	            $("#post-data").append(data.html);
-	        })
-	        .fail(function(jqXHR, ajaxOptions, thrownError)
-	        {
-	              alert('server not responding...');
-	        });
-	}
-
-</script> --}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- javascript-extension -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="resources/js/app.js"></script>
 
 
 </body>
