@@ -42,7 +42,7 @@
         $("#post-data").append(data.html); // ??
       })
 
-      // callback function
+
       // if data fails to load due to an error, send an alert message
       .fail(function(jqXHR, ajaxOptions, thrownError){
         alert("Server not responding...");
@@ -59,6 +59,7 @@
         loadMoreData(page);
       }
     });
+
   </script>
 
 

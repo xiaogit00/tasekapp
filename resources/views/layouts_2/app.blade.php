@@ -19,8 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    {{-- <link rel="stylesheet" type="text/css" href="resources/css/app.css"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{url('resources/css/app.css')}}" > --}}
+    <link rel="stylesheet" type="text/css" href="resources/css/app.css">
+    
+    <!-- jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     {{-- ajax styling --}}
     <style type="text/css">
@@ -89,7 +91,6 @@
     </div>
 
 <!-- javascript-extension -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="resources/js/app.js"></script>
