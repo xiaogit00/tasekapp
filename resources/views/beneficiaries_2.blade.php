@@ -50,7 +50,6 @@
     }
 
     // on scroll to bottom
-    // i think the page variable shows the no. of data to load at any given time
     var page = 1;
     $(window).scroll(function() {
       if($(window).scrollTop() + $(window).height() >= $(document).height()){
@@ -59,7 +58,7 @@
         loadMoreData(page);
       }
     });
-
+    
   </script>
 
 
