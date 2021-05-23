@@ -13,7 +13,7 @@
     @foreach ($persons->all() as $person)
     <!-- insert popover (modal) for names -->
     <!-- div class="modal-dialog modal-dialog-centered" -->
-    </~div>
+    
     <tr class='table-hover'>
 
       <td><a href="/{{$person->id}}">{{$person->name}}</a></td>

@@ -14,9 +14,9 @@ class BennyController extends Controller
 {
     public function myPerson(Request $request)
     {
-      $persons = Person::with('programs')->Paginate(10);
+      $persons = Person::with('programs')->Paginate(30);
       if($request->ajax()){
-        $view = view('data', compact('persons'))->render();
+        $view = view('benny_data2', compact('persons'))->render();
         return response()->json(['html'=>$view]);
       }
 
