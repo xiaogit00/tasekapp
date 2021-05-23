@@ -81,13 +81,11 @@
                         <button class="btn btn-outline-primary" type="button">Search</button>
                     </div>
                 </form>
-                
+
                 <!-- Main Content -->
-<<<<<<< HEAD
                 {{-- why bootstrap overflow-auto not working?  --}}
-=======
                 {{-- why overflow auto not working ? shld remove the pagination 1st? --}}
->>>>>>> 5eb9521d7ca3c47811dfd68be80d78cc9461520f
+
                 <div class="app">
                     @yield('content')
                 </div>
