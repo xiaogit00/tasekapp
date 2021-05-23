@@ -83,7 +83,7 @@
                 </form>
                 <!-- Main Content -->
                 {{-- why overflow auto not working ? shld remove the pagination 1st? --}}
-                <div class="app overflow-auto">
+                <div class="app">
                     @yield('content')
                 </div>
             </div>
