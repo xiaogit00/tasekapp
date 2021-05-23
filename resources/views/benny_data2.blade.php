@@ -10,13 +10,13 @@
   </thead>
   <tbody>
     <!-- This is a loop for the table rows -->
-    @foreach ($persons->all() as $person)
-    <!-- insert popover (modal) for names -->
-    <!-- div class="modal-dialog modal-dialog-centered" -->
-    
-    <tr class='table-hover'>
 
-      <td><a href="/{{$person->id}}">{{$person->name}}</a></td>
+    @foreach ($persons->all() as $person)
+    
+    {{-- insert table hover  --}}
+    <tr class='table-hover'>
+      {{-- data-toggle & data-target triggers the modal --}}
+      <td><a data-toggle="modal" data-target="#myModal" href="/{{$person->id}}">{{$person->name}}</a></td>
       <td>{{$person->dob}}</td>
       <td>
       @foreach ($person->programs as $program)
@@ -34,3 +34,26 @@
 
   </tbody>
 </table>
+
+
+{{-- Modal dialog for the names --}}
+<div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{{$person->name}}.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

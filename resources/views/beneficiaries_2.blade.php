@@ -4,12 +4,10 @@
 
 <body>
 
-  {{-- call data --}}
+  <!-- call-data -->
   <div id="benny-data" class="p-4 p-md-5 pt-5">
  <!-- Beneficiaires Table -->
       @include('benny_data2')
-
-    {{-- {!!$persons->links()!! --}}
   </div>
 
   <!-- Loading -->
@@ -23,7 +21,7 @@
     // pre - data retrieval function
     function loadMoreData(page) {
       // $.ajax(); => standard method used for request
-      $.ajax({ // ajax method to perform the an AJAX request (send the parameters)
+      $.ajax({ // ajax method to perform an AJAX request (send the parameters)
         url: '/?page=' + page, // the URL to send the request to (default is the current page)
         type:'get', // specifies the type of request (get/post)
         beforeSend: function() { // beforeSend method / function => run before sending the request
@@ -53,11 +51,17 @@
     // i think the page variable shows the no. of data to load at any given time
     var page = 1;
     $(window).scroll(function() {
+      didScroll = true;
       if($(window).scrollTop() + $(window).height() >= $(document).height()){
+        console.log($(window).height());
+        console.log($(document).height());
+        console.log($(window).scrollTop());
         page++;
         // call loadMoreData function
         loadMoreData(page);
       }
+
+      
     });
 
   </script>

@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="resources/css/app.css">
+    {{-- <link rel="stylesheet" type="text/css" href="resources/css/app.css"> --}}
 
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -81,9 +81,10 @@
                         <button class="btn btn-outline-primary" type="button">Search</button>
                     </div>
                 </form>
+                
                 <!-- Main Content -->
-                {{-- why overflow auto not working ? shld remove the pagination 1st? --}}
-                <div class="app overflow-auto">
+                {{-- why bootstrap overflow-auto not working?  --}}
+                <div class="app">
                     @yield('content')
                 </div>
             </div>
