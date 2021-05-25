@@ -16,8 +16,9 @@ class BennyController extends Controller
     {
       $persons = Person::with('programs')->Paginate(30);
       if($request->ajax()){
-        $view = view('benny_data2', compact('persons'))->render();
-        return response()->json(['html'=>$view]);
+        //This passes persons variable to the view, which is a table, and $view stores the entire html
+        $view = view('benny_data2', compact('persons'))->render();  //render returns string content of the view
+        return response()->json(['html'=>$view]);  //returns the $view html as response 
       }
 
         return view('beneficiaries_2',compact('persons'));
