@@ -36,7 +36,7 @@
 </table>
 
 
-{{-- Modal dialog for the names --}}
+<!-- Modal dialog for the names -->
 <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 
