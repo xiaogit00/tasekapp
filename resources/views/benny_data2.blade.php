@@ -12,10 +12,10 @@
     <!-- This is a loop for the table rows -->
 
     @foreach ($persons->all() as $person)
-    
-    {{-- insert table hover  --}}
+
+  <!-- Insert Table Hover  -->
     <tr class='table-hover'>
-      {{-- data-toggle & data-target triggers the modal --}}
+      <!-- data-toggle & data-target triggers the modal -->
       <td><a data-toggle="modal" data-target="#myModal" href="/{{$person->id}}">{{$person->name}}</a></td>
       <td>{{$person->dob}}</td>
       <td>

@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    {{-- <link rel="stylesheet" type="text/css" href="resources/css/app.css"> --}}
+    <link rel="stylesheet" type="text/css" href="public/css/app.css"> 
 
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
