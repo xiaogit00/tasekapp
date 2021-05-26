@@ -14,4 +14,5 @@ class FamilyMember extends Model
       // hasOne, hasMany, belongsTo, belongsToMany
       return $this->belongsTo(Family::class, 'id');
     }
+
 }
