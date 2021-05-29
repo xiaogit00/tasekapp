@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    {{-- <link rel="stylesheet" type="text/css" href="resources/css/app.css"> --}}
+    <link href="public/css/app2.css" rel="stylesheet">
 
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -81,14 +81,11 @@
                         <button class="btn btn-outline-primary" type="button">Search</button>
                     </div>
                 </form>
-                
+
                 <!-- Main Content -->
-<<<<<<< HEAD
-                {{-- why bootstrap overflow-auto not working?  --}}
-=======
                 {{-- why overflow auto not working ? shld remove the pagination 1st? --}}
->>>>>>> 5eb9521d7ca3c47811dfd68be80d78cc9461520f
-                <div class="app">
+                {{-- added app-container id for JS scroll event --}}
+                <div class="app" id="app-container">
                     @yield('content')
                 </div>
             </div>
@@ -98,7 +95,7 @@
 <!-- javascript-extension -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="resources/js/app.js"></script>
+{{-- <script src="resources/js/app.js"></script> --}}
 
 
 </body>

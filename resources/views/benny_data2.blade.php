@@ -35,10 +35,17 @@
   </tbody>
 </table>
 
+{{-- .modal {
+  overflow-y: auto;
+ }
+ 
+ .modal-open {
+  overflow: auto;
+ } --}}
 
 {{-- Modal dialog for the names --}}
-<div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+<div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog" style="overflow-x: auto">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
 
     <div class="modal-content">
 
@@ -49,7 +56,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>{{$person->name}}.</p>
+        <p>Please input some text in here</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>

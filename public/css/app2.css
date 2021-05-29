@@ -1,13 +1,12 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+}
 
 /* beneficiaries-page */
-
-/* #sideBarMenu
-
-#createUserButton {
-    font-size: 5px;
+/* #createUserButton {
+    font-size: 20px;
 } */
+
+console.log('aaaaaaaaaaaaaaaaaaaaa');
