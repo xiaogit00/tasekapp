@@ -37,8 +37,7 @@
         }
         // when more data has yet to be loaded
         $('.ajax-load').hide(); // hide the (loading...) text
-        $("#benny-data").append(benny_data2.html); 
-        console.log(benny_data2.html);
+        $("#benny-data").append(benny_data2.html); // This is the id of the div that we'll include bennydata2.html
       })
 
 
@@ -58,9 +57,7 @@
         // call loadMoreData function
         loadMoreData(page);
       }
-
-      
-    });
+      });
 
   </script>
 

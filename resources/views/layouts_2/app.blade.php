@@ -19,12 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="public/css/app2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/app.css"> 
 
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    {{-- ajax styling --}}
+    <!-- ajax styling -->
     <style type="text/css">
 
   		.ajax-load{
@@ -50,7 +50,8 @@
                 <a class="navbar-brand d-flex justify-content-center mt-2" href="#">
                     <div class="h3">TASEK</div>
                 </a>
-                <!-- create_user_button -->
+
+                <!-- create-user-button -->
                 <div class="text-center">
                 <button type="button" id="createUserButton" class="btn btn-primary btn-lg rounded-pill">Create User</button>
                 <hr class="bg-primary">
@@ -82,10 +83,8 @@
                     </div>
                 </form>
 
-                <!-- Main Content -->
-                {{-- why overflow auto not working ? shld remove the pagination 1st? --}}
-                {{-- added app-container id for JS scroll event --}}
-                <div class="app" id="app-container">
+                <!-- Main content -->
+                <div class="app">
                     @yield('content')
                 </div>
             </div>
@@ -95,7 +94,7 @@
 <!-- javascript-extension -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-{{-- <script src="resources/js/app.js"></script> --}}
+<!-- script src="resources/js/app.js" -->
 
 
 </body>

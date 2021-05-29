@@ -23,4 +23,9 @@ class Person extends Model
     public function getAgeAttribute() {
       return $this->dob->diffInYears(\Carbon\Carbon::now());
     }
+
+    public function family() {
+      return $this->belongsTo(Family::class, 'family_members', 'personID', 'familyID');
+    }
+
 }
