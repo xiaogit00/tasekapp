@@ -106,7 +106,8 @@
             <div class="modal-body">
                 <div class="container-fluid">
                     <div class="row">
-                        {{-- 1st column --}}
+                        <form action="" method="POST">
+                        {{-- 1st column  --}}
                         <div class="col-md-2">
                             <img src="image-placeholder-1.png" class="rounded-circle image-fluid" alt="image-placeholder" style="width:30%">
                         </div>
@@ -129,9 +130,11 @@
                             <input type="text" class="form-control" id="user-name" placeholder="lastname">
                           </div>
                         </div>
+                        </form>
                     </div>
                     </div>
                 </div>
+                
                 <div class="modal-footer">
                     <button type="button" class="close btn btn-secondary" data-dismiss="modal" aria-label = "Close">Cancel</button>
                     <button type="button" class="btn btn-primary">Save</button>
