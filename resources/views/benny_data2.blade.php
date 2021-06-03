@@ -46,7 +46,7 @@
     <div class="modal-content">
       <div class="modal-header">
         {{-- input img placeholder --}}
-        <img src="user-image.png" class="rounded-cirlce image-fluid" alt="img_placeholder" width=50" height="50">
+        <img src="image-placeholder-1.png" class="rounded-circle image-fluid" alt="image-placeholder" style="width:30%">
         <h4 class="modal-title" id="exampleModalLabel"><span id="pass_name"></span></h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>

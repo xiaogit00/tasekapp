@@ -10,8 +10,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1c9222c777.js"></script>
 
     <!-- Fonts -->
@@ -53,7 +53,7 @@
 
                 <!-- create-user-button -->
                 <div class="text-center">
-                <button type="button" id="createUserButton" class="btn btn-primary btn-lg rounded-pill">Create User</button>
+                <button type="button" id="createUserButton" class="btn btn-primary btn-lg rounded-pill" data-toggle="modal" data-target="#myModal2">Create User</button>
                 <hr class="bg-primary">
                 <ul class="nav flex-column">
                     <li class="nav-item">
@@ -92,6 +92,34 @@
             </div>
         </div>
     </div>
+
+    {{-- modal for create user button --}}
+    <!-- Modal -->
+    <div id="myModal2" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
+        {{-- consider implementing scrollable modal --}}
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create New User</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                {{-- input form --}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save</button>
+              </div>
+        </div>
+    </div>
+</div>
+       
+
+
+
 
 <!-- javascript-extension -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
