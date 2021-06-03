@@ -101,21 +101,44 @@
       
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Create New User</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+              <h5 class="modal-title" id="exampleModalLabel">Create New Contact</h5>
             </div>
             <div class="modal-body">
-                {{-- input form --}}
+                <div class="container-fluid">
+                    <div class="row">
+                        {{-- 1st column --}}
+                        <div class="col-md-2">
+                            <img src="image-placeholder-1.png" class="rounded-circle image-fluid" alt="image-placeholder" style="width:30%">
+                        </div>
+                        {{-- 2nd column --}}
+                        <div class="col-md-4">
+                        {{-- first name --}}
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="user-name" placeholder="firstname">
+                          </div>
+                          {{-- NRIC --}}
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="user-id" placeholder="NRIC">
+                          </div>
+                        </div>
+
+                          {{-- 3rd column --}}
+                          <div class="col-md-4">
+                              {{-- last name --}}
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="user-name" placeholder="lastname">
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close btn btn-secondary" data-dismiss="modal" aria-label = "Close">Cancel</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary">Save</button>
-              </div>
         </div>
     </div>
-</div>
        
 
 
