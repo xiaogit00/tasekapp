@@ -34,7 +34,6 @@ use Illuminate\Support\Facades\Route;
 //     		$view = view('data',compact('posts'))->render();
 //
 //             return response()->json(['html'=>$view]);
-//
 //         }
 //     return view('beneficiaries_2',
 //     [
