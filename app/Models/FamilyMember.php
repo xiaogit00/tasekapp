@@ -15,4 +15,9 @@ class FamilyMember extends Model
       return $this->belongsTo(Family::class, 'id');
     }
 
+    public function Person()
+    {
+      return $this->hasOne(Person::class);
+    }
+//$user->familyMember->person->name
 }
