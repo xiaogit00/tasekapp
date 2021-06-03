@@ -1,4 +1,4 @@
-<table class='table'>
+<table class='table table-hover'>
   <thead>
     <tr>
       <th>Name</th>
@@ -13,10 +13,13 @@
 
     @foreach ($persons->all() as $person)
 
-  <!-- Insert Table Hover  -->
+  <!-- Insert Table Hover (done) -->
     <tr class='table-hover'>
       <!-- data-toggle & data-target triggers the modal -->
-      <td><a data-toggle="modal" data-target="#myModal" data-target-id="{{ $person }}" href="/{{$person->id}}">{{$person->name}}</a></td>
+      {{-- <td>{{$person->name}}</td> --}}
+
+        {{-- original-text --}}
+        <td><a data-toggle="modal" data-target="#myModal" data-target-id="{{ $person }}" href="/{{$person->id}}">{{$person->name}}</a></td>
       <td>{{$person->dob}}</td>
       <td>
       @foreach ($person->programs as $program)
@@ -45,25 +48,50 @@
 
 <!-- Modal dialog for the names -->
 <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
+  {{-- implement scrollable modal --}}
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        {{-- input img placeholder --}}
+        <img src="cinqueterre.jpg" class="rounded-circle" alt="Cinque Terre">
+        <h4 class="modal-title" id="exampleModalLabel"><span id="pass_name"></span></h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
       <!-- Displaying Person Information -->
-        <p> Name: <span id="pass_name"> </span> </p> </p>
-        <p> Race:<span id="pass_race"></span></p>
-        <p> Gender:<span id="pass_gender"></span></p>
-        <p> nric:<span id="pass_nric"></span></p>
-        <p> dob:<span id="pass_dob"></span></p>
-        <p> address:<span id="pass_address"></span></p>
-        <p> phoneNum:<span id="pass_phoneNum"></span></p>
+      <div class="container-fluid">
+        <div class="row">
+          {{-- user info --}}
+          <div class=col-md-6>
+            {{-- <p> Name: <span id="pass_name"></span></p> --}}
+            <p> dob: <span id="pass_dob"></span></p>
+            <p> phoneNum: <span id="pass_phoneNum"></span></p>
+            <p> address: <span id="pass_address"></span></p>
+            <p> Race: <span id="pass_race"></span></p>
+            <p> Gender: <span id="pass_gender"></span></p>
+            <p> nric: <span id="pass_nric"></span></p>
+          </div>
+
+          {{-- next-of-kin info --}}
+          <div class=col-md-6>
+            {{-- next of kin details --}}
+            {{-- contact details --}}
+            {{-- program --}}
+
+          </div>
+        </div>  
+      
+
+      </div>
+      
+        
+        
+        
+       
 
       </div>
       <div class="modal-footer">

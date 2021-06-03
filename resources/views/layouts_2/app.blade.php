@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
     <script src="https://kit.fontawesome.com/1c9222c777.js"></script>
 
     <!-- Fonts -->

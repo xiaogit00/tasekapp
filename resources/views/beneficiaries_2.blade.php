@@ -15,7 +15,6 @@
     <p>Loading...</p>
   </div>
 
-  
 
   <!-- Ajax Script (using jquery)-->
   <script>
