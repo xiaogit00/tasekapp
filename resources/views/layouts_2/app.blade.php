@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
     <script src="https://kit.fontawesome.com/1c9222c777.js"></script>
 
     <!-- Fonts -->
@@ -23,7 +24,6 @@
 
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 
     <style type="text/css">
 
@@ -50,7 +50,8 @@
                 <a class="navbar-brand d-flex justify-content-center mt-2" href="#">
                     <div class="h3">TASEK</div>
                 </a>
-                <!-- create_user_button -->
+
+                <!-- create-user-button -->
                 <div class="text-center">
                 <button type="button" id="createUserButton" class="btn btn-primary btn-lg rounded-pill">Create User</button>
                 <hr class="bg-primary">
@@ -95,7 +96,7 @@
 <!-- javascript-extension -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="resources/js/app.js"></script>
+<!-- script src="resources/js/app.js" -->
 
 
 </body>

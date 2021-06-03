@@ -11,16 +11,15 @@
   </div>
 
   <!-- Loading -->
-  {{-- add text-center into the ajax-load class --}}
-  <div class="ajax-load" style="display: none"> <!-- display: none means the (loading...) text is not visible -->
+  <div class="ajax-load text-center" style="display: none"> <!-- display: none means the (loading...) text is not visible -->
     <p>Loading...</p>
   </div>
 
-  <!-- Ajax Script -->
+
+  <!-- Ajax Script (using jquery)-->
   <script>
     // pre - data retrieval function
     function loadMoreData(page) {
-      // $.ajax(); => standard method used for request
       $.ajax({ // ajax method to perform an AJAX request (send the parameters)
         url: '/?page=' + page, // the URL to send the request to (default is the current page)
         type:'get', // specifies the type of request (get/post)
@@ -53,18 +52,14 @@
     $(window).scroll(function() {
       didScroll = true;
       if($(window).scrollTop() + $(window).height() >= $(document).height()){
-        console.log($(window).height());
-        console.log($(document).height());
-        console.log($(window).scrollTop());
         page++;
         // call loadMoreData function
         loadMoreData(page);
       }
-
-
-    });
+      });
 
   </script>
+
 
 
 </body>
