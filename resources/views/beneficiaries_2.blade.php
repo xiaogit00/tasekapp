@@ -45,18 +45,20 @@
         alert("Server not responding...");
       });
     }
-
     // on scroll to bottom
     // i think the page variable shows the no. of data to load at any given time
     var page = 1;
+    if ({{!request('query')}}) {
     $(window).scroll(function() {
       didScroll = true;
       if($(window).scrollTop() + $(window).height() >= $(document).height()){
         page++;
         // call loadMoreData function
+
         loadMoreData(page);
       }
       });
+    }
 
   </script>
 
