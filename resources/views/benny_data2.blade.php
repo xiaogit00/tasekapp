@@ -1,4 +1,4 @@
-<table class='table table-hover'>
+<table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th>Name</th>
@@ -12,14 +12,14 @@
     <!-- This is a loop for the table rows -->
 
     @foreach ($persons->all() as $person)
-
-  <!-- Insert Table Hover (done) -->
-    <tr class='table-hover'>
+    <tr class="table-content" data-toggle="modal" data-target="#myModal" data-target-id="{{ $person }}">
       <!-- data-toggle & data-target triggers the modal -->
-      {{-- <td>{{$person->name}}</td> --}}
+      <td>{{$person->name}}</td>
 
         {{-- original-text --}}
-        <td><a data-toggle="modal" data-target="#myModal" data-target-id="{{ $person }}" href="/{{$person->id}}">{{$person->name}}</a></td>
+        {{-- data-target-id: pass the variable person data into the modal --}}
+        {{-- href: --}}
+      {{-- <td><a data-toggle="modal" data-target="#myModal" data-target-id="{{ $person }}" href="/{{$person->id}}">{{$person->name}}</a></td> --}}
       <td>{{$person->dob}}</td>
       <td>
       @foreach ($person->programs as $program)
@@ -38,24 +38,15 @@
   </tbody>
 </table>
 
-{{-- .modal {
-  overflow-y: auto;
- }
- 
- .modal-open {
-  overflow: auto;
- } --}}
-
 <!-- Modal dialog for the names -->
 <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
   {{-- consider implementing scrollable modal --}}
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 
     <div class="modal-content">
-
       <div class="modal-header">
         {{-- input img placeholder --}}
-        <img src="user-image.png" class="rounded-cirlce image-fluid" alt="img_placeholder">
+        <img src="user-image.png" class="rounded-cirlce image-fluid" alt="img_placeholder" width=50" height="50">
         <h4 class="modal-title" id="exampleModalLabel"><span id="pass_name"></span></h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -90,9 +81,9 @@
 
         <hr></hr>
 
-        {{-- case notes --}}
+        {{-- CASE NOTES --}}
         <div class="row">
-         <h5 class="modal-scollable pb-3">Case Notes</h5>
+         <h5 class="case-notes pb-3">Case Notes</h5>
          <div class="case-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -135,21 +126,20 @@
 </div>
 
 <script>
-            $(document).ready(function () {
-                $("#myModal").on("show.bs.modal", function (e) {  //show.bs.modal is an inbuilt action
-                    var person = $(e.relatedTarget).data('target-id');
-                    console.log(person)
-                    $('#pass_name').html(person['name']);//displays the html in selector
-                    $('#pass_race').html(person['race']);
-                    $('#pass_gender').html(person['gender']);
-                    $('#pass_nric').html(person['nric']);
-                    $('#pass_dob').html(person['dob']);
-                    $('#pass_address').html(person['address']);
-                    $('#pass_phoneNum').html(person['phoneNum']);
-                    // $('#pass_').html(person['name']);
-                    // $('#pass_').html(person['name']);
-                    // $('#pass_').html(person['name']);
-                });
-            });
-
-</script>
+$(document).ready(function () {
+  $("#myModal").on("show.bs.modal", function (e) {  //show.bs.modal is an inbuilt action
+  var person = $(e.relatedTarget).data('target-id');
+  console.log(person)
+  $('#pass_name').html(person['name']);//displays the html in selector
+  $('#pass_race').html(person['race']);
+  $('#pass_gender').html(person['gender']);
+  $('#pass_nric').html(person['nric']);
+  $('#pass_dob').html(person['dob']);
+  $('#pass_address').html(person['address']);
+  $('#pass_phoneNum').html(person['phoneNum']);
+  // $('#pass_').html(person['name']);
+  // $('#pass_').html(person['name']);
+  // $('#pass_').html(person['name']);
+  });
+  });
+  </script>
