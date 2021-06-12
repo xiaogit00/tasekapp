@@ -63,19 +63,22 @@
           {{-- user info --}}
           <div class="row">
           <div class="col-md-6">
-            <p> DOB: <span id="pass_dob"></span></p>
-            <p> Contact: <span id="pass_phoneNum"></span></p>
-            <p> Address: <span id="pass_address"></span></p>
-            <p> Race: <span id="pass_race"></span></p>
-            <p> Gender: <span id="pass_gender"></span></p>
             <p> NRIC: <span id="pass_nric"></span></p>
+            <p> DOB: <span id="pass_dob"></span></p>
+            <p> Gender: <span id="pass_gender"></span></p>
+            <p> Contact: <span id="pass_phoneNum"></span></p>
+            <p> Race: <span id="pass_race"></span></p>
+            <p>Programs: <span id ="pass_programs"></span> </p>
+
+
           </div>
 
           {{-- next-of-kin info --}}
           <div class="col-md-6">
-            <p> Next-of-Kin: <span id="pass_name"></span></p>
+            <p> Mother: <span id="pass_name"></span></p>
             <p> Contact: <span id="pass_phoneNum"></span></p>
-            <p> Program: <span id="pass_address"></span></p>
+            <p> Address: <span id="pass_address"></span></p>
+
           </div>
         </div>
 
@@ -117,7 +120,7 @@
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div> 
+        </div>
         </div>
       </div>
     </div>
@@ -129,7 +132,23 @@
 $(document).ready(function () {
   $("#myModal").on("show.bs.modal", function (e) {  //show.bs.modal is an inbuilt action
   var person = $(e.relatedTarget).data('target-id');
-  console.log(person)
+  // var programs = function () {
+  //   var program_list = [];
+  //   if (person['programs']) {
+  //     for (program in person['programs']) {
+  //       program_list.push(program['name']);
+  //     };
+  //   };
+  //   return program_list;
+  // };
+  var programs = person['programs'];
+  var program_list = [];
+  for (i = 0; i < programs.length; i++) {
+    program_list.push(programs[i]['name']);
+  }
+  var programs_String = program_list.toString();
+  // console.log(person)
+  console.log(program_list)
   $('#pass_name').html(person['name']);//displays the html in selector
   $('#pass_race').html(person['race']);
   $('#pass_gender').html(person['gender']);
@@ -137,6 +156,8 @@ $(document).ready(function () {
   $('#pass_dob').html(person['dob']);
   $('#pass_address').html(person['address']);
   $('#pass_phoneNum').html(person['phoneNum']);
+  $('#pass_programs').html(programs_String);
+
   // $('#pass_').html(person['name']);
   // $('#pass_').html(person['name']);
   // $('#pass_').html(person['name']);
