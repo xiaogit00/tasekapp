@@ -98,15 +98,18 @@
     <div id="myModal2" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
         {{-- consider implementing scrollable modal --}}
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      
+
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Create New Contact</h5>
             </div>
+            <!-- FORM BEGINS -->
+            <form action= "{{route('newBenny')}}" method="POST">
+              @csrf
             <div class="modal-body">
                 <div class="container-fluid">
                     <div class="row">
-                        <form action="" method="POST">
+
                         {{-- 1st column  --}}
                         <div class="col-md-2">
                             <img src="image-placeholder-1.png" class="rounded-circle image-fluid" alt="image-placeholder" style="width:30%">
@@ -115,11 +118,11 @@
                         <div class="col-md-4">
                         {{-- first name --}}
                         <div class="form-group">
-                            <input type="text" class="form-control" id="user-name" placeholder="firstname">
+                            <input type="text" class="form-control" id="name" name='name' placeholder="name">
                           </div>
                           {{-- NRIC --}}
                           <div class="form-group">
-                            <input type="text" class="form-control" id="user-id" placeholder="NRIC">
+                            <input type="text" class="form-control" id="nric" name='nric' placeholder="NRIC">
                           </div>
                         </div>
 
@@ -130,19 +133,21 @@
                             <input type="text" class="form-control" id="user-name" placeholder="lastname">
                           </div>
                         </div>
-                        </form>
+
                     </div>
                     </div>
                 </div>
-                
+
                 <div class="modal-footer">
                     <button type="button" class="close btn btn-secondary" data-dismiss="modal" aria-label = "Close">Cancel</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </div>
+                </form>
+                <!-- END FORM -->
             </div>
         </div>
     </div>
-       
+
 
 
 

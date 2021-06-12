@@ -38,17 +38,12 @@ class BennyController extends Controller
             ]);
     }
 
-    // public function search()
-    // {
-    //   if (request('query')) {
-    //     $persons = $persons->where('name', 'like', '%' . request('query') . '%')->get();
-    //
-    //   }
-    //
-    //   return view('beneficiaries_2',
-    //       [
-    //         'persons' => $persons
-    //       ]);
-    // }
+      public function store(Request $request)
+      {
+        $name = $request->input('name');
+        $nric = $request->input('nric');
+        dd($name);
+      }
+
 
 }

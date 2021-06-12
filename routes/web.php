@@ -55,6 +55,8 @@ Route::get('/{person:id}', function (Person $person) {
     ]);
 });
 
+Route::post('/', [BennyController::class, 'store'])->name('newBenny');
+
 
 Auth::routes();
 
