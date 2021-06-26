@@ -10,30 +10,29 @@
         </div>
 
         <!-- FORM BEGINS (create-user-modal) -->
-        <form action= "" method="POST">
+        <form action= "{{route('newBenny')}}" method="POST">
           @csrf
         <div class="modal-body">
             <div class="container-fluid">
 
                 {{-- form --}}
                 <div class="form-floating mb-3">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control form-control-sm border-0 border-bottom" name="name" placeholder="name@example.com">
+                    <input type="text" class="form-control form-control-sm border-0 border-bottom" id="createName" placeholder="name@example.com">
+                    <label for="createName">Name</label>
                 </div>
 
                 <div class="row g-2">
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <label for="nric">NRIC</label>
-                            <input type="text" class="form-control border-0 border-bottom" name="nric" placeholder="Password">
-
+                            <input type="text" class="form-control border-0 border-bottom" id="createIC" placeholder="Password">
+                            <label for="createIC">NRIC</label>
                         </div>
                     </div>
 
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <label for="dob">Birthday</label>
-                            <input type="date" class="form-control border-0 border-bottom" name="dob" placeholder="dd/mm/yyyy">
+                            <input type="date" class="form-control border-0 border-bottom" id="createDOB" placeholder="dd/mm/yyyy">
+                            <label for="createDOB">Birthday</label>
                         </div>
                     </div>
                 </div>
@@ -41,28 +40,27 @@
                 <div class="row g-2">
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <label for="gender">Gender</label>
-                            <input type="text" class="form-control border-0 border-bottom" name="gender" placeholder="Password">
+                            <input type="text" class="form-control border-0 border-bottom" id="createGender" placeholder="Password">
+                            <label for="createGender">Gender</label>
                           </div>
                     </div>
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <label for="race">Race</label>
-                            <input type="text" class="form-control border-0 border-bottom" name="race" placeholder="Password">
+                            <input type="text" class="form-control border-0 border-bottom" id="createRace" placeholder="Password">
+                            <label for="createRace">Race</label>
                           </div>
                     </div>
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <label for="phoneNum">Phone</label>
-                            <input type="text" class="form-control border-0 border-bottom" name="phoneNum" placeholder="XXXXXXXX">
+                            <input type="text" class="form-control border-0 border-bottom" id="createContact" placeholder="XXXXXXXX">
+                            <label for="createContact">Phone</label>
                           </div>
                         </div>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <label for="address">Address</label>
-                        <input type="text" class="form-control border-0 border-bottom" name="address" placeholder="Password">
-
+                        <input type="text" class="form-control border-0 border-bottom" id="createAdd" placeholder="Password">
+                        <label for="createAdd">Address</label>
                     </div>
 
             </div>
