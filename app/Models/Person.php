@@ -18,7 +18,7 @@ class Person extends Model
       return $this->belongsToMany(Program::class, 'program_members', 'personID', 'programID');
 
     }
-    
+
     public function getAgeAttribute() {
       return $this->dob->diffInYears(\Carbon\Carbon::now());
     }

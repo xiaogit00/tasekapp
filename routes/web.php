@@ -43,7 +43,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BennyController::class, 'myPerson']);
 
+Route::get('/adduser', function(){
+  return view('newuser', ['persons' => Person::all()]);
+});
 
+Route::post('/adduser', [BennyController::class, 'store']);
+
+//ATTEMPT AT RETURNING FAMILY MEMBER INFO
 Route::get('/{person:id}', function (Person $person) {
     return view('profile', [
       'person' => $person,
@@ -58,7 +64,8 @@ Route::get('/{person:id}', function (Person $person) {
 Route::post('/', [BennyController::class, 'store'])->name('newBenny');
 
 
-Auth::routes();
+
+// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
