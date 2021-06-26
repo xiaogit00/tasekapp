@@ -110,39 +110,51 @@
                     
                     {{-- form --}}
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="createName" placeholder="name@example.com">
+                        <input type="text" class="form-control form-control-sm border-0 border-bottom" id="createName" placeholder="name@example.com">
                         <label for="createName">Name</label>
-                      </div>
+                    </div>
 
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="createIC" placeholder="Password">
-                        <label for="createIC">NRIC</label>
-                      </div>
+                    <div class="row g-2">
+                        <div class="col-md">             
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control border-0 border-bottom" id="createIC" placeholder="Password">
+                                <label for="createIC">NRIC</label>
+                            </div>
+                        </div>
 
-                      <div class="form-floating mb-3">
-                        <input type="date" class="form-control" id="createDOB" placeholder="dd/mm/yyyy">
-                        <label for="createDOB">DOB</label>
-                      </div>
+                        <div class="col-md">
+                            <div class="form-floating mb-3">
+                                <input type="date" class="form-control border-0 border-bottom" id="createDOB" placeholder="dd/mm/yyyy">
+                                <label for="createDOB">Birthday</label>
+                            </div>
+                        </div>
+                    </div>
 
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="createGender" placeholder="Password">
-                        <label for="createGender">Gender</label>
-                      </div>
-
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="createRace" placeholder="Password">
-                        <label for="createRace">Race</label>
-                      </div>
-
-                      <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="createContact" placeholder="XXXXXXXX">
-                        <label for="createContact">Phone</label>
-                      </div>
-
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="createAdd" placeholder="Password">
-                        <label for="createAdd">Address</label>
-                      </div>
+                    <div class="row g-2">
+                        <div class="col-md">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control border-0 border-bottom" id="createGender" placeholder="Password">
+                                <label for="createGender">Gender</label>
+                              </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control border-0 border-bottom" id="createRace" placeholder="Password">
+                                <label for="createRace">Race</label>
+                              </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control border-0 border-bottom" id="createContact" placeholder="XXXXXXXX">
+                                <label for="createContact">Phone</label>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control border-0 border-bottom" id="createAdd" placeholder="Password">
+                            <label for="createAdd">Address</label>
+                        </div>
                     
                 </div>
 
