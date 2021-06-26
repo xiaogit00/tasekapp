@@ -47,7 +47,7 @@ Route::get('/adduser', function(){
   return view('newuser', ['persons' => Person::all()]);
 });
 
-Route::post('/adduser', [BennyController::class, 'store']);
+Route::post('/adduser', [BennyController::class, 'store'])->name('addUser');
 
 //ATTEMPT AT RETURNING FAMILY MEMBER INFO
 Route::get('/{person:id}', function (Person $person) {
@@ -61,7 +61,7 @@ Route::get('/{person:id}', function (Person $person) {
     ]);
 });
 
-Route::post('/', [BennyController::class, 'store'])->name('newBenny');
+// Route::post('/', [BennyController::class, 'store'])->name('newBenny');
 
 
 

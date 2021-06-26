@@ -11,29 +11,30 @@
         </div>
 
         <!-- FORM BEGINS (create-user-modal) -->
-        <form action= "{{route('newBenny')}}" method="POST">
+        <form action= "" method="POST">
           @csrf
         <div class="modal-body">
             <div class="container-fluid">
 
                 {{-- form --}}
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control form-control-sm border-0 border-bottom" id="createName" placeholder="name@example.com">
-                    <label for="createName">Name</label>
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control form-control-sm border-0 border-bottom" name="name" placeholder="name@example.com">
                 </div>
 
                 <div class="row g-2">
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control border-0 border-bottom" id="createIC" placeholder="Password">
-                            <label for="createIC">NRIC</label>
+                            <label for="nric">NRIC</label>
+                            <input type="text" class="form-control border-0 border-bottom" name="nric" placeholder="Password">
+
                         </div>
                     </div>
 
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <input type="date" class="form-control border-0 border-bottom" id="createDOB" placeholder="dd/mm/yyyy">
-                            <label for="createDOB">Birthday</label>
+                            <label for="dob">Birthday</label>
+                            <input type="date" class="form-control border-0 border-bottom" name="dob" placeholder="dd/mm/yyyy">
                         </div>
                     </div>
                 </div>
@@ -41,27 +42,28 @@
                 <div class="row g-2">
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control border-0 border-bottom" id="createGender" placeholder="Password">
-                            <label for="createGender">Gender</label>
+                            <label for="gender">Gender</label>
+                            <input type="text" class="form-control border-0 border-bottom" name="gender" placeholder="Password">
                           </div>
                     </div>
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control border-0 border-bottom" id="createRace" placeholder="Password">
-                            <label for="createRace">Race</label>
+                            <label for="race">Race</label>
+                            <input type="text" class="form-control border-0 border-bottom" name="race" placeholder="Password">
                           </div>
                     </div>
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control border-0 border-bottom" id="createContact" placeholder="XXXXXXXX">
-                            <label for="createContact">Phone</label>
+                            <label for="phoneNum">Phone</label>
+                            <input type="text" class="form-control border-0 border-bottom" name="phoneNum" placeholder="XXXXXXXX">
                           </div>
                         </div>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control border-0 border-bottom" id="createAdd" placeholder="Password">
-                        <label for="createAdd">Address</label>
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control border-0 border-bottom" name="address" placeholder="Password">
+
                     </div>
 
             </div>
