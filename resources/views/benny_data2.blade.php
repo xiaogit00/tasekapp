@@ -1,16 +1,9 @@
-<table class="table table-hover table-responsive">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Programs</th>
-      <th>Number</th>
-      <th>Address</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- This is a loop for the table rows -->
+{{-- why add table-responsive (bootstrap)? --}}
 
+<table class="table table-hover table-borderless">
+  <tbody>
+
+    <!-- This is a loop for the table rows -->
     @foreach ($persons->all() as $person)
     <tr class="table-content" data-toggle="modal" data-target="#myModal" data-target-id="{{ $person }}">
       <!-- data-toggle & data-target triggers the modal -->

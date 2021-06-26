@@ -79,15 +79,13 @@
                 <form class="input-group mt-2 sticky-top" action="" method="GET">
                     <input type="text" name="query" class="form-control form-control-lg" placeholder="What are you searching for?" aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button">Search</button>
+                        <button class="btn btn-outline-primary btn-lg" type="button">Search</button>
                     </div>
                 </form>
 
-                <!-- Main Content -->
-
-
+                <!-- Main Content (table-content) -->
                 <div class="app">
-                    @yield('content')
+                     @yield('content')
                 </div>
             </div>
         </div>
@@ -103,39 +101,34 @@
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Create New Contact</h5>
             </div>
-            <!-- FORM BEGINS -->
+
+            <!-- FORM BEGINS (create-user-modal) -->
             <form action= "{{route('newBenny')}}" method="POST">
               @csrf
             <div class="modal-body">
                 <div class="container-fluid">
-                    <div class="row">
+                    
+                    {{-- form --}}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="createName" placeholder="name@example.com">
+                        <label for="createName">Name</label>
+                      </div>
 
-                        {{-- 1st column  --}}
-                        <div class="col-md-2">
-                            <img src="image-placeholder-1.png" class="rounded-circle image-fluid" alt="image-placeholder" style="width:30%">
-                        </div>
-                        {{-- 2nd column --}}
-                        <div class="col-md-4">
-                        {{-- first name --}}
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="name" name='name' placeholder="name">
-                          </div>
-                          {{-- NRIC --}}
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="nric" name='nric' placeholder="NRIC">
-                          </div>
-                        </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="createIC" placeholder="Password">
+                        <label for="createIC">NRIC</label>
+                      </div>
 
-                          {{-- 3rd column --}}
-                          <div class="col-md-4">
-                              {{-- last name --}}
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="user-name" placeholder="lastname">
-                          </div>
-                        </div>
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="createDOB" placeholder="name@example.com">
+                        <label for="createDOB">DOB</label>
+                      </div>
 
-                    </div>
-                    </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="createGender" placeholder="Password">
+                        <label for="createGender">Gender</label>
+                      </div>
+                    
                 </div>
 
                 <div class="modal-footer">

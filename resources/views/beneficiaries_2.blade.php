@@ -6,7 +6,20 @@
 
   <!-- call-data -->
   <div id="benny-data" class="p-4 p-md-5 pt-5">
- <!-- Beneficiaires Table -->
+    {{-- table-header --}}
+    <table class="table sticky-top">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Programs</th>
+          <th>Number</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+    </table>
+
+  <!-- Beneficiaires Table -->
       @include('benny_data2')
   </div>
 
@@ -16,7 +29,7 @@
   </div>
 
 
-  <!-- Ajax Script (using jquery)-->
+  <!-- Ajax Script to call more table data(using jquery)-->
   <script>
     // pre - data retrieval function
     function loadMoreData(page) {
