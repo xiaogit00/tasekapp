@@ -91,7 +91,7 @@
         </div>
     </div>
 @include('modals/create_user_modal')
-@include('modals/modal2')
+
 
 
 <!-- javascript-extension -->
